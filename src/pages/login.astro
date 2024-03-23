@@ -15,7 +15,41 @@ import Nav from "../components/Nav.astro";
   </head>
   <body>
     <Nav />
-    <div class="bg-Mycloor-green">會員登入</div>
+    <div
+      class="flex justify-center items-center bg-Mycolor-green text-Mycolor-lightgreen font-semibold text-3xl h-24"
+    >
+      會員登入
+    </div>
+    <div
+      class="flex justify-center items-center bg-Mycolor-lightgreen border border-Mycolor-lightgreen h-28"
+    >
+      <div>facebook</div>
+      <div>google</div>
+      <div>yahoo</div>
+    </div>
+    <div class="bg-Mycolor-green">
+      <div class="flex flex-col items-center">
+        <input
+          type="text"
+          placeholder="電子信箱/手機號碼"
+          class="bg-Mycolor-lightgreen h-14"
+        />
+        <input
+          type="password"
+          placeholder="請輸入使用者密碼"
+          class="bg-Mycolor-lightgreen h-14"
+        />
+        <label for="check" class="flex items-center">
+          <input type="checkbox" id="check" class="h-4 w-4" />
+          <p class="text-base text-Mycolor-lightgreen font-semibold">記住我</p>
+        </label>
+      </div>
+    </div>
+    <div
+      class="flex justify-center items-center bg-Mycolor-yellow text-Mycolor-green font-semibold text-2xl h-16"
+    >
+      登入會員
+    </div>
     <Footer />
   </body>
 </html>
