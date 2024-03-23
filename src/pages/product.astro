@@ -1,0 +1,67 @@
+---
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
+import Banner from "../components/Banner.astro";
+import Pagination from "../components/Pagination.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>dessert</title>
+  </head>
+  <!--body-------------------------------------->
+  <body>
+    <!--header-------------------------------->
+    <div class="w -full">
+      <header>
+        <div class="flex justify-around items-center h-20">
+          <a href="#"
+            ><img
+              src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/dehaze-24px.png?raw=true"
+              alt="dehaze"
+            /></a
+          >
+          <a href="#"
+            ><img
+              src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/student-week1/logotype-sm-dark.svg"
+              alt="logotype"
+              class="w-28"
+            /></a
+          >
+          <a href="#"
+            ><img
+              src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/shopping_cart.png?raw=true"
+              alt="shopping_cart"
+            /></a
+          >
+        </div>
+      </header>
+
+      <!--banner------>
+      <Banner />
+      <!--商品圖片展示-->
+      <div class="flex flex-col gap-[30px] p-[30px]">
+        <Card
+          img="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-1.png?raw=true"
+          title="奇異果蛋糕"
+          price={450}
+        />
+        <Card
+          img="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-1.png?raw=true"
+          title="奇異果蛋糕"
+          price={450}
+        />
+        <Pagination/>
+      </div>
+      <!--footer-------------------------------------------->
+      <Footer />
+    </div>
+  </body>
+</html>

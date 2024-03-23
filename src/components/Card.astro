@@ -1,0 +1,23 @@
+---
+interface Props {
+  img: string;
+  title: string;
+  price: number;
+}
+const { img, title, price } = Astro.props;
+---
+
+<div class="flex flex-col items-stretch text-Mycolor-green font-bold relative">
+    <div class="absolute top-0 left-[21px] p-[10.5px] vertical-writing-rl text-Mycolor-white bg-Mycolor-green tracking-[0.3em]">本日精選</div>
+    <button class="absolute top-[20px] right-[25px] w-[20px] h-[20px]">
+        <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/favorite_border.png?raw=true" alt="">
+    </button>
+  <img src={img} alt="dessert" />
+  <div class="flex items-stretch bg-Mycolor-lightgreen gap-[2px] w-full text-[20px] px-[1px]">
+    <span class="font-light bg-Mycolor-white grow py-[14px] text-center">{title}</span>
+    <span class="font-semibold bg-Mycolor-white grow py-[14px] text-center shrink-0 block px-3">NT$ {price}</span>
+  </div>
+  <button class="bg-Mycolor-lightgreen text-2xl py-4 font-semibold">
+    加入購物車
+  </button>
+</div>

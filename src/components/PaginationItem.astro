@@ -1,0 +1,16 @@
+---
+interface Props {
+  href?: string;
+  active?: boolean;
+}
+const { href = "#", active = false } = Astro.props;
+const textColor = active ? "text-Mycolor-white" : "text-Mycolor-green";
+const bgColor = active ? "bg-Mycolor-green" : "bg-Mycolor-white";
+const weight = active ? "font-semibold" : "font-light";
+---
+
+<li class={`py-4 px-6 ${textColor} ${bgColor} ${weight}`}>
+  <a href={href}>
+    <slot />
+  </a>
+</li>
