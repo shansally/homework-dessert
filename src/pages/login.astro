@@ -21,24 +21,29 @@ import Nav from "../components/Nav.astro";
       會員登入
     </div>
     <div
-      class="flex justify-center items-center bg-Mycolor-lightgreen border border-Mycolor-lightgreen h-28"
+      class="flex justify-center items-center bg-Mycolor-lightgreen border border-Mycolor-lightgreen h-28 lg:hidden"
     >
-      <div>facebook</div>
-      <div>google</div>
-      <div>yahoo</div>
+      <div><a href="#"><img src="" alt="facebook" /> </a></div>
+      <div><a href="#"><img src="" alt="google" /> </a></div>
+      <div><a href="#"><img src="" alt="yahoo" /> </a></div>
     </div>
-    <div class="bg-Mycolor-green">
-      <div class="flex flex-col items-center">
-        <input
-          type="text"
-          placeholder="電子信箱/手機號碼"
-          class="bg-Mycolor-lightgreen h-14"
-        />
+    <div class="flex flex-col items-center bg-Mycolor-green">
+      <div class="flex flex-col items-center pb-6 pt-6">
+        <!-------圖片須改 -->
+        <div>
+          <input
+            type="text"
+            placeholder="電子信箱/手機號碼"
+            class="bg-Mycolor-lightgreen h-14 w-full pl-16"
+          />
+          <span>圖</span>
+        </div>
         <input
           type="password"
           placeholder="請輸入使用者密碼"
-          class="bg-Mycolor-lightgreen h-14"
+          class="bg-Mycolor-lightgreen h-14 w-full pl-16"
         />
+
         <label for="check" class="flex items-center">
           <input type="checkbox" id="check" class="h-4 w-4" />
           <p class="text-base text-Mycolor-lightgreen font-semibold">記住我</p>
@@ -48,7 +53,7 @@ import Nav from "../components/Nav.astro";
     <div
       class="flex justify-center items-center bg-Mycolor-yellow text-Mycolor-green font-semibold text-2xl h-16"
     >
-      登入會員
+      登入帳號
     </div>
     <Footer />
   </body>

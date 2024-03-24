@@ -1,0 +1,32 @@
+---
+interface Props {
+  img: string;
+  title: string;
+  price: number;
+  total: number;
+}
+const { img, title, price, total } = Astro.props;
+---
+
+<div class="mb-2 pt-6 px-6 lg:px-0 flex justify-between text-Mycolor-green">
+  <img src={img} alt="dessert" class="h-[106px] w-[157px]" />
+  <div class="flex justify-around">
+    <div class="flex flex-col items-start">
+      <span class="text-xl">{title}</span>
+      <span class="text-base">NT${price}</span>
+
+      <ul
+        class="w-full flex justify-center items-center text-center border border-Mycolor-lightgreen gap-[1px]"
+      >
+        <li class="h-12 w-12 text-center"><a href="#">-</a></li>
+        <li class="h-12 w-12">2</li>
+        <li class="h-12 w-12"><a href="#">+</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<p
+  class="flex justify-end text-xl text-Mycolor-green font-semibold h-7 pr-[30px] py[8.5px] border-y-2 border-Mycolor-lightgreen"
+>
+  NT${total}
+</p>
