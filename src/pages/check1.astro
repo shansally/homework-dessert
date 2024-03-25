@@ -2,3 +2,102 @@
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 ---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>dessert</title>
+  </head>
+  <Nav />
+  <!--運送 -->
+  <div class="col-span-12 lg:col-span-6">
+    <div class="w-full bg-Mycolor-green p-6 text-Mycolor-lightgreen lg:px-8">
+      <div class="mb-6 flex items-center justify-between">
+        <h2 class="text-4xl font-semibold">運送</h2>
+        <ul class="flex justify-between w-40 lg:w-52">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+    <form class="text-Mycolor-lightgreen bg-Mycolor-green text-xl gap-4">
+      <div>
+        <div class="flex">
+          <label for="lastname">
+            <p>姓氏</p>
+            <input
+              type="text"
+              id="lastname"
+              placeholder="王"
+              class="mt-1.75 block pl-4 h-14"
+            />
+          </label>
+          <div></div>
+          <label for="name">
+            <p>名字</p>
+            <input
+              type="text"
+              id="name"
+              placeholder="小明"
+              class="mt-1.75 block pl-4 h-14"
+            />
+          </label>
+        </div>
+        <label for="tel">
+          <p>電話</p>
+          <input
+            type="tel"
+            id="tel"
+            placeholder="0912-345-678"
+            class="mb-3.5 mt-1.75 block h-14 pl-4 w-full"
+          />
+        </label>
+        <label for="address"><p>地址</p></label>
+        <div class="mt-1.75 flex gap-4">
+          <div class="relative w-full">
+            <input
+              type="text"
+              id="address"
+              placeholder="高雄市"
+              class="h-14 pl-4"
+            />
+            <a href="##">
+              <span class="absolute righ-4 top-3 rotate-90">switch_left圖</span>
+            </a>
+          </div>
+          <div class="relative w-full">
+            <input
+              type="text"
+              id="address"
+              placeholder="新興區"
+              class="mb-1.75 h-14 pl-4"
+            />
+            <a href="##">
+              <span class="absolute righ-4 top-3 rotate-90">switch_left圖</span>
+            </a>
+          </div>
+        </div>
+        <input
+          type="text"
+          id="address"
+          placeholder="幸福路520號"
+          class="block h-14 pl-4 w-full"
+        />
+      </div>
+    </form>
+    <div
+      class="flex justify-center items-center bg-Mycolor-yellow text-Mycolor-green font-semibold text-2xl h-16"
+    >
+      下一步
+    </div>
+    <Footer />
+  </div>
+
+
+</html>
