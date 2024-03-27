@@ -52,9 +52,12 @@ import Card from "../components/Card.astro";
 
     <!--區塊 -->
     <section class="w-full relative">
-      <Indexcard
+      <div class="flex flex-col lg:gap-[60px]">
+        <Indexcard
         heading="./imge/sm-橫-做甜點.svg"
+        headinglg="./imge/lg-為什麼選擇了做甜點.svg"
         img="https://bit.ly/2xPn7Eq"
+        reverse
       >
       青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
 
@@ -62,12 +65,14 @@ import Card from "../components/Card.astro";
       </Indexcard>
       <Indexcard
         heading="./imge/sm-橫-吃甜點.svg"
+        headinglg="./imge/lg-為什麼一定要吃甜點.svg"
         img="https://bit.ly/2zzAQS4"
       >
         青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
       
 是非成敗轉頭空，青山依舊在，幾度夕陽紅。白髮漁樵江渚上，古今多少事，都付笑談中。
       </Indexcard>
+      </div>
       <div>
         <img src="./imge/sm-橫-理由.svg" class="h-16 my-8 w-full" />
       </div>

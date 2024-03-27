@@ -2,16 +2,20 @@
 interface Props {
   img: string;
   heading: string;
+  headinglg: string;
+  reverse?: boolean;
 }
-const { img, heading} = Astro.props;
+const { img, heading, headinglg, reverse = false } = Astro.props;
 ---
 
 <div
-  class="flex flex-col items-center lg:h-[420px] lg:flex-row lg:justify-between lg:bg-Mycolor-lightgreen"
+  class={`relative flex flex-col items-center lg:h-[460px] ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} lg:justify-center lg:px-[42px]`}
 >
-  <img src={heading} class="h-16 my-8 w-full" />
-  <img src={img} alt="dessert" class="w-full h-[250px] object-cover mx-8" />
-  <p class="px-[30px] bg-Mycolor-lightgreen lg:bg-transparent text-Mycolor-ordergreen font-light leading-8 whitespace-pre-wrap">
+  <div class="-z-10 hidden lg:block lg:absolute bg-Mycolor-lightgreen top-[20px] left-0 w-full h-[420px]"/>
+  <img src={heading} class="block lg:hidden h-16 my-8 w-full" />
+  <img src={headinglg} class={`hidden lg:block lg:self-start h-[307px] ${reverse ? "" : "order-2"}`} />
+  <img src={img} alt="dessert" class={`z-1 w-full h-[250px] lg:w-[460px] lg:h-[460px] lg:shrink-0 object-cover mx-8 order-last`} />
+  <p class="px-[30px] bg-Mycolor-lightgreen lg:bg-transparent text-Mycolor-ordergreen font-light leading-8 whitespace-pre-wrap lg:vertical-writing-rl lg:h-[280px]">
     <slot/>
   </p>
 </div>
