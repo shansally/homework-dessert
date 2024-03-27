@@ -1,6 +1,8 @@
 ---
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import Indexcard from "../components/Indexcard.astro";
+import Card from "../components/Card.astro";
 ---
 
 <!doctype html>
@@ -14,7 +16,59 @@ import Footer from "../components/Footer.astro";
     <title>dessert</title>
   </head>
   <body>
-    <a href="/product">111</a><Nav />
-    <div class="text-red-500">hsssg</div>
+    <Nav />
+    <!--banner -->
+    <section class="px-0 md:px-6 lg:px-0">
+      <div
+        class="bg-[url('https://bit.ly/2OhbMHr')] h-[800px] truncate w-full bg-cover bg-center bg-no-repeat md:h-[496px]"
+      >
+        <section
+          class="w-full justify-center px-0 md:px-6 lg:flex lg:px-0 bg-Mycolor-green text-Mycolor-white text-xl font-light"
+        >
+          <ul
+            class="flex justify-center items-center mb-6 lg:mt-1 lg:w-[780px]"
+          >
+            <li
+              class="w-1/3 bg-[url('https://bit.ly/2OhbMHr')] bg-cover bg-center bg-no-repeat"
+            >
+              <a href="http://localhost:4322/product">本日精選</a>
+            </li>
+            <li
+              class="w-1/3 bg-[url('https://bit.ly/2Dwoxd7')] bg-cover bg-center bg-no-repeat"
+            >
+              <a href="http://localhost:4322/product">人氣推薦</a>
+            </li>
+            <li
+              class="w-1/3 bg-[url('https://bit.ly/2OUteif')] bg-cover bg-center bg-no-repeat"
+            >
+              <a href="http://localhost:4322/product">新品上市</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <img src="" />
+
+    <!--區塊 -->
+    <section class="truncate">
+      <Indexcard
+        heading="./imge/sm-橫-做甜點.svg"
+        img="https://bit.ly/2xPn7Eq"
+        title="青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。 "
+      />
+      <Indexcard
+        heading="./imge/sm-橫-吃甜點.svg"
+        img="https://bit.ly/2zzAQS4"
+        title="君不見黃河之水天上來，奔流到海不復回。君不見高堂明鏡悲白髮，朝如青絲暮成雪。人生得意須盡歡，莫使金樽空對月。天生我材必有用，千金散盡還復來。烹羊宰牛且爲樂，會須一飲三百杯。 "
+      />
+      <img src="./imge/sm-橫-理由.svg" class="h-16 m-8 w-full" />
+      <Card
+        img="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-2.png?raw=true"
+        title="焦糖甜甜圈"
+        price={450}
+      />
+    </section>
+    <Footer />
   </body>
 </html>

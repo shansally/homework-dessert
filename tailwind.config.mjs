@@ -12,6 +12,7 @@ export default {
           blue: "#EAF0ED",
           yellow: "#FFE180",
           white: "#FFFFFF",
+          ordergreen: "#8DA291",
         },
       },
     },
