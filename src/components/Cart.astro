@@ -8,25 +8,32 @@ interface Props {
 const { img, title, price, total } = Astro.props;
 ---
 
-<div class="mb-2 pt-6 px-6 lg:px-0 flex justify-between text-Mycolor-green">
-  <img src={img} alt="dessert" class="h-[106px] w-[157px]" />
-  <div class="flex justify-around">
+<div class="mb-2 pt-6 px-6 lg:px-0 flex justify-between gap-3 text-Mycolor-green">
+  <img src={img} alt="dessert" class="object-cover h-[106px] lg:h-[110px] w-[157px] lg:w-[110px] shrink-0" />
+  <div class="w-full flex flex-col lg:flex-row lg:justify-between lg:items-center lg:pl-[30px] items-start">
     <div class="flex flex-col items-start">
-      <span class="text-xl">{title}</span>
-      <span class="text-base">NT${price}</span>
-
-      <ul
-        class="w-full flex justify-center items-center border border-Mycolor-lightgreen gap-[1px]"
-      >
-        <li class="h-12 w-12 text-center"><a href="#">-</a></li>
-        <li class="h-12 w-12 text-center">2</li>
-        <li class="h-12 w-12 text-center"><a href="#">+</a></li>
-      </ul>
+      <span class="text-xl font-light">{title}</span>
+      <span class="text-base font-light">NT${price}</span>
     </div>
+    <div
+      class="mt-2 w-36 flex justify-center items-stretch border border-Mycolor-lightgreen bg-Mycolor-lightgreen gap-[1px]"
+    >
+      <button class="h-12 grow text-center flex items-center justify-center bg-white">-</button>
+      <span class="h-12 grow text-center flex items-center justify-center bg-white">2</span>
+      <button class="h-12 grow text-center flex items-center justify-center bg-white">+</button>
+    </div>
+    <div
+      class="hidden lg:block text-xl text-Mycolor-green font-semibold"
+    >
+      NT${total}
+    </div>
+    <button>
+      <span class="material-symbols-outlined hidden lg:block text-Mycolor-ordergreen"> delete </span>
+    </button>
   </div>
 </div>
-<p
-  class="flex justify-end text-xl text-Mycolor-green font-semibold h-7 pr-[30px] py[8.5px] border-y-2 border-Mycolor-lightgreen"
+<div
+  class="flex lg:hidden justify-end text-xl text-Mycolor-green font-semibold pr-[30px] py-[8.5px] border-y-2 border-Mycolor-lightgreen"
 >
   NT${total}
-</p>
+</div>

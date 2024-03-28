@@ -18,54 +18,61 @@ import Login from "../components/Login.astro";
   </head>
   <body>
     <Nav />
-    <div
-      class="flex justify-center items-center bg-Mycolor-green text-Mycolor-lightgreen font-semibold text-3xl h-24"
-    >
-      會員登入
-    </div>
-    <div
-      class="flex justify-center items-center bg-Mycolor-lightgreen border px-6 py-8"
-    >
-      <ul class="w-full flex">
-        <Login img="./imge/ic-facebook-logotype.svg" />
-        <Login img="./imge/ic-google.svg" />
-        <Login img="./imge/ic-yahoo.svg" />
-      </ul>
-    </div>
-    <!--信箱密碼 -->
-    <div class="flex flex-col items-center bg-Mycolor-green">
-      <div class="flex flex-col items-start py-6 px-7 w-full">
-      
-        <div class="relative mb-3 w-full">
-          <span class="material-symbols-outlined absolute left-5 top-4 text-2xl leading-6 text-Mycolor-green" >
-            person
-            </span>
-          <input
-            type="text"
-            placeholder="電子信箱/手機號碼"
-            class="bg-Mycolor-lightgreen h-14 w-full pl-16"
-          />
+    <div class="block lg:flex lg:flex-row-reverse lg:justify-center lg:px-[122px] lg:py-[60px]">
+      <div
+          class="flex lg:hidden justify-center items-center bg-Mycolor-green text-Mycolor-lightgreen font-semibold text-3xl h-24"
+        >
+          會員登入
         </div>
-        <div class="relative mb-3 w-full">
-          <span class="material-symbols-outlined absolute left-5 top-4 text-2xl leading-6 text-Mycolor-green">
-            vpn_key
-            </span>
-          <input
-            type="password"
-            placeholder="請輸入使用者密碼"
-            class="bg-Mycolor-lightgreen h-14 w-full pl-16"
-          />
-        </div>
-        <label for="check" class="flex items-center gap-1">
-          <input type="checkbox" id="check" class="h-4 w-4 accent-Mycolor-green" />
-          <p class="text-base text-Mycolor-lightgreen font-semibold ">記住我</p>
-        </label>
+      <div class="flex justify-center items-center bg-Mycolor-lightgreen border px-6 py-8 lg:border-y-[20px] lg:border-white">
+        <ul class="w-full flex flex-row lg:flex-col lg:gap-4">
+          <h2 class="text-Mycolor-ordergreen font-light hidden lg:block text-[24px] text-center mb-[20px]">—— 連結社群帳號 ——</h2>
+          <Login img="./imge/ic-facebook-logotype.svg" />
+          <Login img="./imge/ic-google.svg" />
+          <Login img="./imge/ic-yahoo.svg" />
+        </ul>
       </div>
-    </div>
-    <div
-      class="flex justify-center items-center bg-Mycolor-yellow text-Mycolor-green font-semibold text-2xl h-16"
-    >
-      登入帳號
+      <!--信箱密碼 -->
+      <div>
+        <div
+          class="hidden lg:flex justify-center items-center bg-Mycolor-green text-Mycolor-lightgreen font-semibold text-3xl h-24"
+        >
+          會員登入
+        </div>
+        <div class="flex flex-col items-center bg-Mycolor-green">
+          <div class="flex flex-col items-start py-6 px-7 w-full">
+            <div class="relative mb-3 w-full lg:w-[330px]">
+              <span class="material-symbols-outlined absolute left-5 top-4 text-2xl leading-6 text-Mycolor-green" >
+                person
+                </span>
+              <input
+                type="text"
+                placeholder="電子信箱/手機號碼"
+                class="bg-Mycolor-lightgreen h-14 w-full pl-16"
+              />
+            </div>
+            <div class="relative mb-3 w-full lg:w-[330px]">
+              <span class="material-symbols-outlined absolute left-5 top-4 text-2xl leading-6 text-Mycolor-green">
+                vpn_key
+                </span>
+              <input
+                type="password"
+                placeholder="請輸入使用者密碼"
+                class="bg-Mycolor-lightgreen h-14 w-full pl-16"
+              />
+            </div>
+            <label for="check" class="flex items-center gap-1">
+              <input type="checkbox" id="check" class="h-4 w-4 accent-Mycolor-green" />
+              <p class="text-base text-Mycolor-lightgreen font-semibold ">記住我</p>
+            </label>
+          </div>
+        </div>
+        <button
+          class="w-full flex justify-center items-center bg-Mycolor-yellow text-Mycolor-green font-semibold text-2xl h-16"
+        >
+          登入帳號
+      </button>
+      </div>
     </div>
     <Footer />
   </body>
