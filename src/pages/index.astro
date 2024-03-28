@@ -24,9 +24,9 @@ import Card from "../components/Card.astro";
       >
       </div>
       <section
-        class="w-full justify-center px-0 md:px-6 lg:flex lg:px-0 bg-Mycolor-green text-Mycolor-white text-xl font-light"
+        class="w-full justify-center px-0 md:px-6 lg:flex lg:px-0 bg-Mycolor-green lg:bg-transparent text-Mycolor-white text-xl font-light lg:mt-[-80px] lg:mb-16 relative"
       >
-        <ul class="flex justify-center items-center lg:mt-1 lg:w-[780px]">
+        <ul class="flex justify-center items-center lg:mt-1 lg:w-[780px] ">
           <li
             class="w-1/3 bg-[url('https://bit.ly/2R5tqwD')] bg-cover bg-center bg-no-repeat h-[180px] relative block"
           >
@@ -79,10 +79,28 @@ import Card from "../components/Card.astro";
           是非成敗轉頭空，青山依舊在，幾度夕陽紅。白髮漁樵江渚上，古今多少事，都付笑談中。
         </Indexcard>
       </div>
-      <div>
-        <img src="./imge/sm-橫-理由.svg" class="h-16 my-8 w-full" />
+      <div class="lg:flex lg:justify-center lg:items-center">
+        <img src="./imge/sm-橫-理由.svg" class="h-16 my-8 w-full lg:hidden" />
+        <img src="./imge/lg-想吃甜點是不需要理由的.svg" class="lg:my-20  hidden lg:block lg:h-[328px] lg:w-[90px] " />
       </div>
-      <div class="px-7 pb-8">
+      <div class="block lg:hidden px-7 pb-8">
+        <Card
+          img="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-2.png?raw=true"
+          title="焦糖甜甜圈"
+          price={450}
+        />
+      </div>
+      <div class="hidden lg:flex lg:justify-center lg:items-center lg:gap-4 px-7 pb-8">
+        <Card
+          img="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-2.png?raw=true"
+          title="焦糖甜甜圈"
+          price={450}
+        />
+        <Card
+          img="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-2.png?raw=true"
+          title="焦糖甜甜圈"
+          price={450}
+        />
         <Card
           img="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-2.png?raw=true"
           title="焦糖甜甜圈"
