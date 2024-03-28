@@ -13,37 +13,47 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>dessert</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
   </head>
   <body>
     <Nav />
-    <div
-      class="flex justify-center items-center text-2xl font-semibold text-Mycolor-green bg-Mycolor-lightgreen h-[65px]"
-    >
-      您的購物車
+    <div class="lg:flex lg:justify-center lg:my-4">
+      <div class="w-full text-Mycolor-lightgreen lg:px-8 lg:w-[45%]"></div>
+      <div
+        class="flex justify-center items-center text-2xl font-semibold text-Mycolor-green bg-Mycolor-lightgreen h-[65px]"
+      >
+        您的購物車
+      </div>
+      <span class="material-symbols-outlined"> delete </span>
+      <Cart
+        img="https://bit.ly/2QvsT63"
+        title="鮮莓果優格"
+        price={450}
+        total={900}
+      />
+      <span class="material-symbols-outlined"> delete </span>
+      <Cart
+        img="https://bit.ly/2zBDAxX"
+        title="鮮草莓蛋糕"
+        price={450}
+        total={900}
+      />
+      <span class="material-symbols-outlined"> delete </span>
+      <Cart
+        img="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-3.png?raw=true"
+        title="莓大莓小塔"
+        price={450}
+        total={900}
+      />
     </div>
-    <Cart
-      img="https://bit.ly/2QvsT63"
-      title="鮮莓果優格"
-      price={450}
-      total={900}
-    />
-    <Cart
-      img="https://bit.ly/2zBDAxX"
-      title="鮮草莓蛋糕"
-      price={450}
-      total={900}
-    />
-    <Cart
-      img="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-3.png?raw=true"
-      title="莓大莓小塔"
-      price={450}
-      total={900}
-    />
     <!--訂單摘要 -->
-    <div class="col-span-12 lg:col-span-4">
+    <div class="col-span-12 lg:col-span-4 lg:block lg:w-[25%]">
       <ul class="px-6 md:px-3.75">
         <h2
-          class="mb-3.5 border-b py-2.25 bg-Mycolor-lightgreen text-center text-2xl font-semibold text-Mycolor-green lg:bg-Mycolor-green lg:text-Mycolor-white lg:border-Mycolor-lightgreen"
+          class="flex justify-center items-center h-[65px] border-b bg-Mycolor-lightgreen text-center text-2xl font-semibold text-Mycolor-green lg:bg-Mycolor-green lg:text-Mycolor-white lg:border-Mycolor-lightgreen"
         >
           訂單摘要
         </h2>
@@ -67,12 +77,12 @@ import Footer from "../components/Footer.astro";
           <span>NT$3000</span>
         </li>
       </ul>
-      <div
-        class="flex justify-center items-center h-[65px] text-Mycolor-green bg-Mycolor-yellow text-2xl font-semibold"
-      >
-        <a href="http://localhost:4321/check1">結帳</a>
-      </div>
     </div>
-    <Footer />
+    <div
+      class="flex justify-center items-center h-[65px] text-Mycolor-green bg-Mycolor-yellow text-2xl font-semibold"
+    >
+      <a href="http://localhost:4321/check1">結帳</a>
+    </div>
   </body>
+  <Footer />
 </html>

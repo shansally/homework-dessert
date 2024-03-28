@@ -27,11 +27,10 @@ import Timeline from "../components/Timeline.astro";
   <Nav />
   <!--運送 -->
 
-  <div class="col-span-12 lg:col-span-6">
-    <div class="w-full bg-Mycolor-green p-6 text-Mycolor-lightgreen lg:px-8">
-      <div class="m-6 flex items-center justify-between">
+  <div class="col-span-12 lg:col-span-6 lg:flex lg:justify-center lg:my-4">
+    <div class="w-full text-Mycolor-lightgreen lg:px-8 lg:w-[45%]">
+      <div class="p-6 flex items-center justify-between bg-Mycolor-green">
         <h2 class="text-4xl font-semibold">運送</h2>
-
         <Timeline
           span1="material-symbols-outlined"
           circle1="radio_button_checked"
@@ -97,19 +96,19 @@ import Timeline from "../components/Timeline.astro";
           </div>
         </div>
       </form>
+      <a
+        href="http://localhost:4322/check2"
+        class="flex justify-center items-center bg-Mycolor-yellow text-Mycolor-green font-semibold text-2xl h-16"
+      >
+        下一步
+      </a>
     </div>
-    <a
-      href="http://localhost:4322/check2"
-      class="flex justify-center items-center bg-Mycolor-yellow text-Mycolor-green font-semibold text-2xl h-16"
-    >
-      下一步
-    </a>
     <!--訂單摘要 -->
-    <div class="hidden lg:col-span-4 lg:block">
+    <div class="hidden lg:col-span-4 lg:block lg:w-[25%]">
       <Checkorder /><!--插入訂單＆購物清單 -->
     </div>
-    <Footer />
   </div>
+  <Footer />
 
 
 </html>

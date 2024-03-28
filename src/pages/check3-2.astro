@@ -25,10 +25,10 @@ import Checkorder from "../components/Checkorder.astro";
   </head>
   <body>
     <Nav />
-
-    <div class="col-span-12 lg:col-span-6">
-      <div class="w-full bg-Mycolor-green p-6 text-Mycolor-lightgreen lg:px-8">
-        <div class="mb-6 mt-4 ml-1 flex items-center justify-between">
+    <!--發票-郵寄 -->
+    <div class="col-span-12 lg:col-span-6 lg:flex lg:justify-center lg:my-4">
+      <div class="w-full text-Mycolor-lightgreen lg:px-8 lg:w-[45%]">
+        <div class="p-6 flex items-center justify-between bg-Mycolor-green">
           <h2 class="text-4xl font-semibold">發票</h2>
           <Timeline
             span1="material-symbols-outlined"
@@ -39,77 +39,83 @@ import Checkorder from "../components/Checkorder.astro";
             circle3="radio_button_checked"
           />
         </div>
-      </div>
+        <form
+          class="text-Mycolor-lightgreen bg-Mycolor-green text-xl gap-4 p-6"
+        >
+          <div>
+            <ul class="flex mb-6">
+              <li
+                class="bg-Mycolor-green text-Mycolor-lightgreenn font-semibold border border-Mycolor-lightgreen w-full text-center"
+              >
+                <a href="#" class="block py-4">電子發票</a>
+              </li>
+              <li
+                class="text-Mycolor-green bg-Mycolor-lightgreen text-Mycolor-gree font-semibold border border-Mycolor-lightgreen w-full text-center"
+              >
+                <a href="#" class="block py-4">郵寄發票</a>
+              </li>
+            </ul>
 
-      <form class="text-Mycolor-lightgreen bg-Mycolor-green text-xl gap-4 p-6">
-        <div>
-          <ul class="flex mb-6">
-            <li
-              class="bg-Mycolor-green text-Mycolor-lightgreenn font-semibold border border-Mycolor-lightgreen w-full text-center"
-            >
-              <a href="#" class="block py-4">電子發票</a>
-            </li>
-            <li
-              class="text-Mycolor-green bg-Mycolor-lightgreen text-Mycolor-gree font-semibold border border-Mycolor-lightgreen w-full text-center"
-            >
-              <a href="#" class="block py-4">郵寄發票</a>
-            </li>
-          </ul>
-
-          <label class="mt-1.75 flex gap-4"><p class="my-2">地址</p></label>
-          <div class="relative w-full flex justify-between">
-            <select
-              name="address"
-              class="h-14 pl-4 w-[49%] text-Mycolor-ordergreen"
-            >
-              <option value="khh">高雄市</option>
-              <option value="pei">台北市</option>
-              <option value="chung">台中市</option>
-              <option value="nan">台南市</option>
-            </select>
-            <select
-              name="address"
-              class="h-14 pl-4 w-[49%] text-Mycolor-ordergreen"
-            >
-              <option value="xx">新興區</option>
-              <option value="ly">苓雅區</option>
-              <option value="sm">三民區</option>
-              <option value="gs">岡山區</option>
-            </select>
-          </div>
-          <div class="pt-2 pb-6">
-            <input
-              type="text"
-              placeholder="幸福路520號"
-              class="block h-14 pl-4 w-full text-Mycolor-ordergreen"
-            />
-          </div>
-
-          <div class="flex gap-x-2">
-            <label for="bill" class="w-full">
-              <p class="mb-2">統一編號（選填）</p>
+            <label class="mt-1.75 flex gap-4 justify-between">
+              <p class="my-2">地址</p>
+              <div class="flex">
+                <input type="checkbox" />
+                <p class="flex justify-center items-center">同運送地址</p>
+              </div>
+            </label>
+            <div class="relative w-full flex justify-between">
+              <select
+                name="address"
+                class="h-14 pl-4 w-[49%] text-Mycolor-ordergreen"
+              >
+                <option value="khh">高雄市</option>
+                <option value="pei">台北市</option>
+                <option value="chung">台中市</option>
+                <option value="nan">台南市</option>
+              </select>
+              <select
+                name="address"
+                class="h-14 pl-4 w-[49%] text-Mycolor-ordergreen"
+              >
+                <option value="xx">新興區</option>
+                <option value="ly">苓雅區</option>
+                <option value="sm">三民區</option>
+                <option value="gs">岡山區</option>
+              </select>
+            </div>
+            <div class="pt-2 pb-6">
               <input
                 type="text"
-                id="bill"
-                placeholder="1209-4321"
-                class="mb-3.5 mt-1.75 block h-14 pl-4 w-full text-Mycolor-green"
+                placeholder="幸福路520號"
+                class="block h-14 pl-4 w-full text-Mycolor-ordergreen"
               />
-            </label>
+            </div>
+
+            <div class="flex gap-x-2">
+              <label for="bill" class="w-full">
+                <p class="mb-2">統一編號（選填）</p>
+                <input
+                  type="text"
+                  id="bill"
+                  placeholder="1209-4321"
+                  class="mb-3.5 mt-1.75 block h-14 pl-4 w-full text-Mycolor-green"
+                />
+              </label>
+            </div>
           </div>
-        </div>
-      </form>
-      <a
-        href="http://localhost:4321/checkoutsuccess"
-        class="flex justify-center items-center bg-Mycolor-yellow text-Mycolor-green font-semibold text-2xl h-16"
-      >
-        確認結帳
-      </a>
+        </form>
+        <a
+          href="http://localhost:4321/checkoutsuccess"
+          class="flex justify-center items-center bg-Mycolor-yellow text-Mycolor-green font-semibold text-2xl h-16"
+        >
+          確認結帳
+        </a>
+      </div>
       <!--訂單摘要 -->
-      <div class="hidden lg:col-span-4 lg:block">
+      <div class="hidden lg:col-span-4 lg:block lg:w-[25%]">
         <Checkorder /><!--插入訂單＆購物清單 -->
       </div>
-
-      <Footer />
     </div>
+    <Footer />
   </body>
 </html>

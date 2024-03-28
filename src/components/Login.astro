@@ -1,0 +1,12 @@
+---
+interface Props {
+  img: string;
+}
+const { img } = Astro.props;
+---
+
+<li class="w-full border-r border-Mycolor-white">
+  <a href="" class="flex h-14 items-center justify-center bg-Mycolor-white"
+    ><img src={img} class="h-4 w-20" /></a
+  >
+</li>

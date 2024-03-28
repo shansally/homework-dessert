@@ -25,10 +25,10 @@ import Checkorder from "../components/Checkorder.astro";
   </head>
   <body>
     <Nav />
-
-    <div class="col-span-12 lg:col-span-6">
-      <div class="w-full bg-Mycolor-green p-6 text-Mycolor-lightgreen lg:px-8">
-        <div class="mb-6 mt-4 flex items-center justify-between">
+    <!--發票-電子 -->
+    <div class="col-span-12 lg:col-span-6 lg:flex lg:justify-center lg:my-4">
+      <div class="w-full text-Mycolor-lightgreen lg:px-8 lg:w-[45%]">
+        <div class="p-6 flex items-center justify-between bg-Mycolor-green">
           <h2 class="text-4xl font-semibold">發票</h2>
           <Timeline
             span1="material-symbols-outlined"
@@ -39,61 +39,60 @@ import Checkorder from "../components/Checkorder.astro";
             circle3="radio_button_checked"
           />
         </div>
+        <form
+          class="text-Mycolor-lightgreen bg-Mycolor-green text-xl gap-4 p-6"
+        >
+          <div>
+            <ul class="flex mb-6">
+              <li
+                class="bg-Mycolor-lightgreen text-Mycolor-green font-semibold border border-Mycolor-lightgreen w-full text-center"
+              >
+                <a href="#" class="block py-4">電子發票</a>
+              </li>
+              <li
+                class="bg-Mycolor-green text-Mycolor-lightgreen font-semibold border border-Mycolor-lightgreen w-full text-center"
+              >
+                <a href="#" class="block py-4">郵寄發票</a>
+              </li>
+            </ul>
+
+            <div class="flex gap-x-2">
+              <label for="mail" class="w-full">
+                <p class="mb-2">電子郵件信箱</p>
+                <input
+                  type="email"
+                  id="mail"
+                  placeholder="example@email.com"
+                  class="mb-3.5 mt-1.75 block h-14 pl-4 w-full text-Mycolor-ordergreen"
+                />
+              </label>
+            </div>
+
+            <div class="flex gap-x-2">
+              <label for="bill" class="w-full">
+                <p class="mb-2">統一編號（選填）</p>
+                <input
+                  type="text"
+                  id="bill"
+                  placeholder="1209-4321"
+                  class="mb-3.5 mt-1.75 block h-14 pl-4 w-full text-Mycolor-ordergreen"
+                />
+              </label>
+            </div>
+          </div>
+        </form>
+        <a
+          href="http://localhost:4321/check3-2"
+          class="flex justify-center items-center bg-Mycolor-yellow text-Mycolor-green font-semibold text-2xl h-16"
+        >
+          確認結帳
+        </a>
       </div>
-
-      <form class="text-Mycolor-lightgreen bg-Mycolor-green text-xl gap-4 p-6">
-        <div>
-          <ul class="flex mb-6">
-            <li
-              class="bg-Mycolor-lightgreen text-Mycolor-green font-semibold border border-Mycolor-lightgreen w-full text-center"
-            >
-              <a href="#" class="block py-4">電子發票</a>
-            </li>
-            <li
-              class="bg-Mycolor-green text-Mycolor-lightgreen font-semibold border border-Mycolor-lightgreen w-full text-center"
-            >
-              <a href="#" class="block py-4">郵寄發票</a>
-            </li>
-          </ul>
-
-          <div class="flex gap-x-2">
-            <label for="mail" class="w-full">
-              <p class="mb-2">電子郵件信箱</p>
-              <input
-                type="email"
-                id="mail"
-                placeholder="example@email.com"
-                class="mb-3.5 mt-1.75 block h-14 pl-4 w-full text-Mycolor-ordergreen"
-              />
-            </label>
-          </div>
-
-          <div class="flex gap-x-2">
-            <label for="bill" class="w-full">
-              <p class="mb-2">統一編號（選填）</p>
-              <input
-                type="text"
-                id="bill"
-                placeholder="1209-4321"
-                class="mb-3.5 mt-1.75 block h-14 pl-4 w-full text-Mycolor-ordergreen"
-              />
-            </label>
-          </div>
-        </div>
-      </form>
-      <a
-        href="http://localhost:4321/check3-2"
-        class="flex justify-center items-center bg-Mycolor-yellow text-Mycolor-green font-semibold text-2xl h-16"
-      >
-        確認結帳
-      </a>
-
       <!--訂單摘要 -->
-      <div class="hidden lg:col-span-4 lg:block">
+      <div class="hidden lg:col-span-4 lg:block lg:w-[25%]">
         <Checkorder /><!--插入訂單＆購物清單 -->
       </div>
-
-      <Footer />
     </div>
+    <Footer />
   </body>
 </html>
