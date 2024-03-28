@@ -3,12 +3,13 @@ import PaginationItem from "./PaginationItem.astro";
 ---
 
 <ul
-  class="flex w-full justify-center items-stretch border border-Mycolor-lightgreen bg-Mycolor-lightgreen gap-[1px]"
+  class="flex w-fit justify-center items-stretch border border-Mycolor-lightgreen bg-Mycolor-lightgreen gap-[1px]"
 >
   <PaginationItem>
     <img
       src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_left.png?raw=true"
       alt=""
+      class="w-[24px] h-[24px] object-cover"
     />
   </PaginationItem>
   <PaginationItem active>1</PaginationItem>
@@ -18,6 +19,7 @@ import PaginationItem from "./PaginationItem.astro";
     <img
       src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_right.png?raw=true"
       alt=""
+      class="w-[24px] h-[24px] object-cover"
     />
   </PaginationItem>
 </ul>

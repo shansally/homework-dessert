@@ -2,18 +2,19 @@
 import BannerItem from "./BannerItem.astro";
 ---
 
-<img
-  src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/banner.png?raw=true"
-  alt="banner"
-/>
 <div
-  class="bg-Mycolor-green text-white border-solid text-2xl py-4 font-semibold text-center"
+  class="lg:w-[300px] block lg:hidden bg-Mycolor-green text-white border-solid text-2xl py-4 font-semibold text-center"
 >
   甜點類別
 </div>
 <ul
-  class="flex flex-col justify-center items-stretch m-auto font-semibold bg-Mycolor-lightgreen gap-[1px] border border-Mycolor-lightgreen"
+  class="lg:w-[300px] flex flex-col justify-center items-stretch lg:mt-[30px] font-semibold bg-Mycolor-lightgreen gap-[1px] border border-Mycolor-lightgreen"
 >
+  <div
+  class="hidden lg:block bg-Mycolor-green text-white border-solid text-2xl py-4 font-semibold text-center"
+  >
+  甜點類別
+  </div>
   <BannerItem href="#" active>所有甜點(48)</BannerItem>
   <BannerItem href="#">本日精選(10)</BannerItem>
   <BannerItem href="#">人氣推薦(26)</BannerItem>

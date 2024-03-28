@@ -20,29 +20,52 @@ import Pagination from "../components/Pagination.astro";
   <body>
     <!--header-------------------------------->
     <Nav />
+    <img
+      src="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/banner.png?raw=true"
+      alt="banner"
+      class="lg:w-[940px] lg:h-[496px] mx-auto"
+    />
+    <div class="lg:flex lg:justify-center lg:items-start lg:px-[42px]">
+      <!--banner------>
+      <Banner />
+      <!--商品圖片展示-->
+      <div class="flex flex-col lg:grid lg:grid-cols-2 gap-[30px] p-[30px] lg:grow">
+        <Card
+          img="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-1.png?raw=true"
+          title="奇異果蛋糕"
+          price={450}
+        />
+        <Card
+          img="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-2.png?raw=true"
+          title="焦糖甜甜圈"
+          price={450}
+        />
+        <Card
+          img="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-3.png"
+          title="莓大莓小塔"
+          price={450}
+        />
+        <Card
+          img="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-1.png?raw=true"
+          title="奇異果蛋糕"
+          price={450}
+        />
+        <Card
+          img="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-2.png?raw=true"
+          title="焦糖甜甜圈"
+          price={450}
+        />
+        <Card
+          img="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-3.png"
+          title="莓大莓小塔"
+          price={450}
+        />
+        <div class="lg:col-start-2 lg:place-self-end">
+          <Pagination />
+        </div>
+      </div>
+    </div>
+    <!--footer-------------------------------------------->
+    <Footer />
   </body>
-
-  <!--banner------>
-  <Banner />
-  <!--商品圖片展示-->
-  <div class="flex flex-col gap-[30px] p-[30px]">
-    <Card
-      img="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-1.png?raw=true"
-      title="奇異果蛋糕"
-      price={450}
-    />
-    <Card
-      img="https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/p-2.png?raw=true"
-      title="焦糖甜甜圈"
-      price={450}
-    />
-    <Card
-      img="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-3.png"
-      title="莓大莓小塔"
-      price={450}
-    />
-    <Pagination />
-  </div>
-  <!--footer-------------------------------------------->
-  <Footer />
 </html>
